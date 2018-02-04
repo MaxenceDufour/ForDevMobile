@@ -1,6 +1,7 @@
 ﻿using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -48,6 +49,9 @@ namespace ForDevUniversel
                 // Placez le frame dans la fenêtre active
                 Window.Current.Content = rootFrame;
             }
+
+            // FULLSCREEN
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.FullScreen;
 
             if (e.PrelaunchActivated == false)
             {
